@@ -21,7 +21,35 @@ nav ul li {
     list-style: none;
     margin: 5px 20px;
     font-size: 16px;
+}
 
+.nav-links a:not(.btn) {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 12px; /* Add padding to make space for the border */
+}
+
+.nav-links a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff; /* Adjust the color as needed */
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-links a:not(.btn):hover::after {
+    width: 100%;
+}
+
+.btn {
+    transition: none;
+}
+
+.btn::after {
+    transition: none;
 }
 
 .dark-nav {
@@ -63,6 +91,15 @@ nav ul li {
         display: block;
         margin: 25px 40px;
     }
+
+    nav a {
+        transition: none;
+    }
+    
+    nav a:hover {
+        transform: none;
+    }
+
     .menu-icon {
         display: block;
         width: 30px;

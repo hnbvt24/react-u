@@ -1,3 +1,8 @@
+.footer ul li a:hover {
+    color:#212EA0;
+  }
+  
+
 .footer {
     margin: 10px auto;
     display: flex;
